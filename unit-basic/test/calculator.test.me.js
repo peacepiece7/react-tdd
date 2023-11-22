@@ -1,3 +1,5 @@
+// WARNING : 아무것도 모르고 만들어봤는데 이렇게 작성하면 안된다...!! ㅋㅋㅋ
+
 const Calculator = require('../calculator')
 
 const SET = 'set'

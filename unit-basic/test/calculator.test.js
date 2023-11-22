@@ -1,16 +1,16 @@
 const Calculator = require('../calculator')
-
-/**
- * API keyword
- * it : `describe` 하고있는 key의 3인칭
- * beforeEach, afterEach, beforeAll, afterAll : 테스트 코드의 독립성을 보장하기 위한 기능들
- */
+// API keyword
+// it : `describe` 하고있는 key의 3인칭
+// beforeEach, afterEach, beforeAll, afterAll : 테스트 코드의 독립성을 보장하기 위한 기능들
 
 describe('Calculator', () => {
   let cal
 
-  // 각각의 테스트 코드는 독립적이어야 함
+  /**
+   * @see https://jestjs.io/docs/setup-teardown
+   */
   beforeEach(() => {
+    // 각각의 테스트 코드는 독립적이어야 함
     cal = new Calculator()
   })
 

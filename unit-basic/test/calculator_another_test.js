@@ -1,7 +1,7 @@
 const Calculator = require('../calculator')
 const calc = new Calculator()
 
-// this를 return한다면 메서드 체이닝으로 간편하게 가능
+// this를 return 한다면 메서드 체이닝으로 간편하게 가능
 test('set function', () => {
   expect(calc.set(9).value).toBe(9)
 })
