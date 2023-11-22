@@ -13,3 +13,15 @@ ex) mocha, karma
 ex) chai, should.js, expect.js, better-assert
 
 jest를 사용하면 위 두가지를 동시에 가능
+
+# Jest
+
+https://jestjs.io/
+
+- zero config
+- snapshots
+- isolated
+- great apis (it, expect)
+  - https://jestjs.io/docs/api
+- mocking
+- exceptional error messages

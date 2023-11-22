@@ -1,0 +1,20 @@
+{
+  "name": "unit-basic",
+  "version": "1.0.0",
+  "description": "```\r cd unit-basic\r npm init -yes\r npm install global jest\r ```",
+  "main": "add.js",
+  "scripts": {
+    "test:watch": "jest --watch",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:description": "jest --coverage --coverageReporters=\"json-summary\"",
+    "test:verbose": "jest --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.9",
+    "jest": "^29.7.0"
+  }
+}
