@@ -1,4 +1,7 @@
+// WANNING : Bad example
+
 // ESM ISSUE (no-babel) : https://github.com/jestjs/jest/issues/10025
+// 런던파, 고전파 단위 테스트 https://kukim.tistory.com/107
 const ProductService = require('../product_service_no_di.js')
 const ProductClient = require('../product_client.js')
 
@@ -30,11 +33,9 @@ describe('Product service', () => {
 
   it('should filter out only available items', async () => {
     const items = await productService.fetchAvailableItems() // * fetchItems는 네트워크를 사용하지 않고 mock으로 대체됨
-    console.log('items : ', items)
     expect(items.length).toBe(1)
     expect(items).toEqual([{ item: 'Milk', available: true }])
   })
-
   it('test', async () => {
     await productService.fetchAvailableItems()
     // jest.config.js에 clearMocks를 true로 하거나, test 전에 clearMocks를 호출해야 한다.

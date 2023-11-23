@@ -81,3 +81,13 @@ expect(new Set(shoppingList)).toContain('milk');
 - toThrow : 에러 throw
 
 `expect(() => compileAndroidCode()).toThrow('you are using the wrong JDK');`
+
+## Jest 정리
+
+1. 함수 단위의 테스트 코드를 작성해야함
+2. 비동기 코드의 경우 네트워크같은 사이드 이펙트가 테스트 코드에 영향을 주어선 않됨
+3. 행동 또는 결과를 테스트 해야함
+
+Stub는 주로 행동을 테스트할 때 사용
+
+Mock은 주로 결과를 테스트할 때 사용
