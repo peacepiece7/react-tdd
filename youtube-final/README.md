@@ -27,3 +27,13 @@ react-testing-library는 내구 구현 사항에 얽매이지 않고 사용자�
 클레스 이름이 바뀌어도 테스트 코드에 영향이 없다.
 
 but 자식 컴포넌트를 테스트 하기는 어렵기 때문에 Jest의 mock을 사용해서 같이 테스트 해야한다.
+
+## Coverage
+
+% stmt : 문장 커버리지
+
+% branch : 분기 커버리지 (if, switch)
+
+% func : 함수 커버리지
+
+% lines : 라인 커버리지

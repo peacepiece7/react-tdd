@@ -5,6 +5,7 @@ import VideoCard from '../VideoCard'
 import { formatAgo } from '../../util/date'
 import { FakeVideo as video } from '../../tests/videos'
 import { withRouter } from '../../tests/utils'
+import renderer from 'react-test-renderer'
 
 describe('VideoCard', () => {
   // prettier-ignore
@@ -44,5 +45,27 @@ describe('VideoCard', () => {
     const card = screen.getByRole('listitem')
     userEvent.click(card)
     expect(screen.getByText(JSON.stringify({ video }))).toBeInTheDocument()
+  })
+
+  /**
+   * UI의 변경 -> Jest의 Snapshot testing
+   * @see https://jestjs.io/docs/snapshot-testing
+   */
+  it('renders grid type correctly', () => {
+    const component = renderer.create(
+      withRouter(<Route path='/' element={<VideoCard video={video} />} />)
+    )
+    const tree = component.toJSON()
+    // 스냅샷이 변경된게 확실하면 u 를 눌러서 스냅샷 업데이트 하기
+    expect(tree).toMatchSnapshot()
+  })
+  it('renders list type correctly', () => {
+    const component = renderer.create(
+      withRouter(
+        <Route path='/' element={<VideoCard video={video} type='list' />} />
+      )
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
   })
 })
