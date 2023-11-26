@@ -4,11 +4,11 @@ import { formatAgo } from '@/utile/date'
 
 type Video = Omit<SearchVideo['items'][0], 'id'> & { id: string }
 
-interface VideoCardProps {
-  type?: 'list' | 'item'
+export interface VideoCardProps {
+  type?: 'list' | 'grid'
   video: Video
 }
-export default function VideoCard({ video, type = 'item' }: VideoCardProps) {
+export default function VideoCard({ video, type = 'grid' }: VideoCardProps) {
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet
   const navigate = useNavigate()
   const isList = type === 'list'

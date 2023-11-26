@@ -24,7 +24,9 @@ export function withAllContexts(children: ReactNode, youtube: Youtube) {
 function createTestQueryClient() {
   return new QueryClient({
     defaultOptions: {
-      queries: { retry: false },
+      queries: {
+        retry: false,
+      },
     },
   })
 }

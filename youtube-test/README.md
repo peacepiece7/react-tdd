@@ -98,8 +98,10 @@ export default defineConfig({
 
 비동기 함수는 테스트 코드 내에서 mock implementation을 통해 인터셉트 (msw 대신 stub를 따로 만듬)
 
-https://xionwcfm.tistory.com/369
-https://github.com/XionWCFM/vite-mui
+[vite typescrip 환경 jest 설정하기](https://xionwcfm.tistory.com/369)
+[viite typescript 환경 jest 설정하기 코드](https://github.com/XionWCFM/vite-mui)
+
+정말 유용한 [testing-library/react cheat sheet](https://testing-library.com/docs/react-testing-library/cheatsheet#queries)
 
 ## 테스팅에 필요한 도구 설치
 
