@@ -1,4 +1,4 @@
-export const FakeVideo = {
+export const fakeVideo = {
   id: 1,
   snippet: {
     title: 'title',
@@ -11,9 +11,9 @@ export const FakeVideo = {
       },
     },
   },
-}
+};
 
-export const FakeVideos = [
+export const fakeVideos = [
   {
     id: 1,
     snippet: {
@@ -42,4 +42,4 @@ export const FakeVideos = [
       },
     },
   },
-]
+];

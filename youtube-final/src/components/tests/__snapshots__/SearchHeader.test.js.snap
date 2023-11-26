@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search Header renders correctly 1`] = `
+exports[`SearchHeader renders correctly  1`] = `
 <header
   className="w-full flex p-4 text-2xl border-b border-zinc-600 mb-4"
 >

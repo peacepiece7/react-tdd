@@ -2,15 +2,27 @@
 
 ## References
 
-https://legacy.reactjs.org/docs/testing.html
+### React
 
-https://legacy.reactjs.org/docs/testing-recipes.html
+[react testing](https://legacy.reactjs.org/docs/testing.html)
 
-https://legacy.reactjs.org/docs/testing-environments.html
+[react testing recipes](https://legacy.reactjs.org/docs/testing-recipes.html)
 
-https://testing-library.com/docs/react-testing-library/intro
+[react testing env](https://legacy.reactjs.org/docs/testing-environments.html)
 
-https://jestjs.io/docs/tutorial-react
+### react testing library
+
+[react testing library](https://testing-library.com/docs/react-testing-library/intro)
+
+[react testing library cheat sheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+
+### Jest
+
+[Jest docs](https://jestjs.io/docs/tutorial-react)
+
+### react-query
+
+[react-query testing docs](https://tanstack.com/query/latest/docs/react/guides/testing)
 
 ## Jest
 
@@ -28,7 +40,7 @@ react-testing-library는 내구 구현 사항에 얽매이지 않고 사용자�
 
 but 자식 컴포넌트를 테스트 하기는 어렵기 때문에 Jest의 mock을 사용해서 같이 테스트 해야한다.
 
-## Coverage
+## Coverage (Jest)
 
 % stmt : 문장 커버리지
 
