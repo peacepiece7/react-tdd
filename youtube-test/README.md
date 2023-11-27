@@ -28,7 +28,7 @@
 
 [import order setting](https://db2dev.tistory.com/entry/ESLint-importorder-규칙-설정하고-뒤죽박죽-import-코드-개선하기#newlines-between)
 
-`npm install eslint-plugin-import`
+`npm install -D eslint-plugin-import eslint-import-resolver-typescript`
 
 ```cjs
 {
@@ -41,7 +41,12 @@
           // ...your import order config
        }
     ]
-  }
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {},
+    },
+  },
 }
 ```
 
