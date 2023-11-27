@@ -4,7 +4,17 @@ import { MemoryRouter, Routes } from 'react-router-dom'
 import Youtube from '@/api/youtube'
 import { YoutubeApiContext } from '../context/YoutubeApiContext'
 
-export function withRouter(routes: ReactNode, initialEntry = '/') {
+type InitialEntryPrarms =
+  | string
+  | {
+      pathname: string
+      state?: unknown
+      key?: string
+    }
+export function withRouter(
+  routes: ReactNode,
+  initialEntry: InitialEntryPrarms = '/'
+) {
   return (
     <MemoryRouter initialEntries={[initialEntry]}>
       <Routes>{routes}</Routes>
