@@ -3,6 +3,7 @@ import ChannelInfo from '@/components/ChannelInfo'
 import RelatedVideos from '@/components/RelatedVideos'
 
 export default function VideoDetail() {
+  // !BUG : navigate의 state로 상태를 전달하기 떄문에 detail 페이지로 direct 접근시 에러 발생!
   const {
     state: { video },
   } = useLocation()

@@ -35,7 +35,6 @@ export interface IYoutubeClient {
 export default class YoutubeClient implements IYoutubeClient {
   private httpClient: AxiosInstance
   constructor() {
-    console.log(import.meta.env)
     this.httpClient = axios.create({
       baseURL: 'https://www.googleapis.com/youtube/v3',
       params: { key: import.meta.env.VITE_YOUTUBE_API_KEY },
@@ -52,6 +51,8 @@ export default class YoutubeClient implements IYoutubeClient {
   }
 
   async channels<T>(params: YoutubeChennelParams) {
+    console.log('params', params)
+
     return this.httpClient.get<T>('channels', params)
   }
 }

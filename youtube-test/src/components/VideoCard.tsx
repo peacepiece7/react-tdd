@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom'
+import { PopularVideo } from '@/models/popular'
 import { SearchVideo } from '@/models/search'
 import { formatAgo } from '@/utile/date'
 
-type Video = Omit<SearchVideo['items'][0], 'id'> & { id: string }
-
+type SearchItem = Omit<SearchVideo['items'][0], 'id'> & { id: string }
 export interface VideoCardProps {
   type?: 'list' | 'grid'
-  video: Video
+  video: PopularVideo['items'][0] | SearchItem
 }
 export default function VideoCard({ video, type = 'grid' }: VideoCardProps) {
   const { title, thumbnails, channelTitle, publishedAt } = video.snippet

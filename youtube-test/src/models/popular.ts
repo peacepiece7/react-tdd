@@ -1,4 +1,4 @@
-export interface Popular {
+export interface PopularVideo {
   kind: string
   etag: string
   items: Item[]

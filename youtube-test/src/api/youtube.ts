@@ -1,5 +1,6 @@
 import type { IYoutubeClient } from './youtubeClient'
 import { Channel } from '@/models/channel'
+import { PopularVideo } from '@/models/popular'
 import { SearchVideo } from '@/models/search'
 
 export interface IYoutube {
@@ -48,22 +49,22 @@ export default class Youtube implements IYoutube {
           q: keyword,
         },
       })
-      .then((res) =>
-        res.data.items.map((item) => ({ ...item, id: item.id.videoId }))
-      )
+      .then((res) => {
+        return res.data.items.map((item) => ({ ...item, id: item.id.videoId }))
+      })
   }
 
   async #mostPopular() {
     return this.apiClient
-      .videos<SearchVideo>({
+      .videos<PopularVideo>({
         params: {
           part: 'snippet',
           maxResults: 25,
           chart: 'mostPopular',
         },
       })
-      .then((res) =>
-        res.data.items.map((item) => ({ ...item, id: item.id.videoId }))
-      )
+      .then((res) => {
+        return res.data.items.map((item) => ({ ...item, id: item.id }))
+      })
   }
 }
