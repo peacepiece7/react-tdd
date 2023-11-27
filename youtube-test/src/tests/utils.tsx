@@ -1,8 +1,10 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactNode } from 'react'
 import { MemoryRouter, Routes } from 'react-router-dom'
+import Youtube from '@/api/youtube'
 import { YoutubeApiContext } from '../context/YoutubeApiContext'
 
-export function withRouter(routes, initialEntry = '/') {
+export function withRouter(routes: ReactNode, initialEntry = '/') {
   return (
     <MemoryRouter initialEntries={[initialEntry]}>
       <Routes>{routes}</Routes>
@@ -10,7 +12,7 @@ export function withRouter(routes, initialEntry = '/') {
   )
 }
 
-export function withAllContexts(children, youtube) {
+export function withAllContexts(children: ReactNode, youtube: Youtube) {
   const testClient = createTestQueryClient()
   return (
     <YoutubeApiContext.Provider value={{ youtube }}>
@@ -22,12 +24,9 @@ export function withAllContexts(children, youtube) {
 function createTestQueryClient() {
   return new QueryClient({
     defaultOptions: {
-      queries: { retry: false },
-    },
-    logger: {
-      log: console.log,
-      warn: console.warn,
-      error: () => {},
+      queries: {
+        retry: false,
+      },
     },
   })
 }

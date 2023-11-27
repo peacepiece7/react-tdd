@@ -11,7 +11,7 @@ export const fakeVideo = {
       },
     },
   },
-};
+}
 
 export const fakeVideos = [
   {
@@ -42,4 +42,4 @@ export const fakeVideos = [
       },
     },
   },
-];
+]
